@@ -1,29 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>WestAlgo Plan Karşılaştırması</title>
+  <meta charset="UTF-8">
+  <title>WestAlgo Plan Comparison</title>
   <style>
-    body { background: #111; color: white; font-family: sans-serif; padding: 40px; }
-    table { width: 100%; border-collapse: collapse; font-size: 14px; }
-    th, td { border: 1px solid #444; padding: 10px; text-align: center; }
-    th { background: #222; }
-    td { background: #1c1c1c; }
+    body {
+      background-color: #111;
+      color: white;
+      font-family: sans-serif;
+      padding: 30px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #1c1c1c;
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #333;
+    }
+    th {
+      background-color: #222;
+      font-weight: bold;
+    }
+    .check {
+      color: #00cc66;
+    }
+    .cross {
+      color: #ff3333;
+    }
   </style>
 </head>
 <body>
-  <h2>📊 WestAlgo Plan Comparison</h2>
+  <h2>📊 WestAlgo Plan Karşılaştırması</h2>
   <table>
-    <tr><th>Feature</th><th>Signal</th><th>PRO</th><th>3-Month PRO</th></tr>
-    <tr><td>Long & Short Trades</td><td>✅</td><td>✅</td><td>✅</td></tr>
-    <tr><td>EMA 9/50 Cross</td><td>✅</td><td>✅</td><td>✅</td></tr>
-    <tr><td>BoS + Liquidity Sweep</td><td>❌</td><td>✅</td><td>✅</td></tr>
-    <tr><td>Engulfing Candle Filter</td><td>❌</td><td>✅</td><td>✅</td></tr>
-    <tr><td>Dynamic TP/SL (ATR / Swing / Fibo / Fixed)</td><td>❌</td><td>✅</td><td>✅</td></tr>
-    <tr><td>Signal Score & Confidence %</td><td>❌</td><td>✅</td><td>✅</td></tr>
-    <tr><td>Pattern Detection (Doji, Hammer...)</td><td>❌</td><td>✅</td><td>✅</td></tr>
-    <tr><td>1 Active Trade (Anti-spam)</td><td>✅</td><td>✅</td><td>✅</td></tr>
-    <tr><td>BUY / SELL Alerts</td><td>✅</td><td>✅</td><td>✅</td></tr>
+    <tr>
+      <th>Özellik</th>
+      <th>Signal</th>
+      <th>PRO</th>
+      <th>3-Month PRO</th>
+    </tr>
+    <tr><td>Long & Short işlemler</td><td class="check">✅</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>EMA 9/50 kesişimiyle sinyal</td><td class="check">✅</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>EMA yön filtresi</td><td class="check">✅</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Break of Structure (BoS)</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Likidite Sweep</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Engulfing Mum Filtresi</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>RSI Overbought/Oversold Filtresi</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>ADX Trend Gücü Filtresi</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>MACD Kesişim Filtresi</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Stochastic RSI</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Volume Spike Filtresi</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Tüm Filtreleri Aç/Kapatma Seçeneği</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Dinamik TP/SL (ATR / Fibo / Swing / Fixed)</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>TP/SL Etiketleri (fiyat gösterimi)</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>TP/SL Kutuları (yeşil/kırmızı)</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Sadece 1 aktif pozisyon (anti-spam)</td><td class="check">✅</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Confidence Score (yüzdelik güven)</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Signal Score etiketi</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Trend Paneli (EMA, BoS, Volume vs)</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Ortalama sinyal aralığı (gün/dk)</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Toplam işlem ve başarı oranı</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>BUY / SELL Alarm Koşulları</td><td class="check">✅</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>BUY / SELL Etiketleri</td><td class="check">✅</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Doji / Hammer Algılama</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Double Top & Bottom Algılama</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Head & Shoulders Algılama</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Bull / Bear Flag Algılama</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Tüm Formasyonları Aç/Kapat Seçeneği</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
+    <tr><td>Backtest Başlangıç Tarihi Belirleme</td><td class="cross">❌</td><td class="check">✅</td><td class="check">✅</td></tr>
   </table>
 </body>
 </html>
